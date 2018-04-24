@@ -35,6 +35,7 @@ sudo sed -i 's/supervised no/supervised systemd/g'
 #sudo sed -i 's_dir_dir /var/lib/redis_g' (additional tests required)
 
 echo "### Criando systemd unit file para que o sistema de inicialização possa gerenciar o processo do Redis"
+sudo touch /etc/systemd/system/redis.service
 sudo echo "[Unit]
 Description=Redis In-Memory Data Store
 After=network.target
